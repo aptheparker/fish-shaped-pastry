@@ -18,8 +18,10 @@ export default function Header() {
       </div>
 
       {/* bottom header */}
-      <div className="flex flex-row justify-center text-white pt-4 px-14 text-4xl">
-        <h1 className="text-center">붕어빵 소식</h1>
+      <div className="flex flex-row justify-center pt-4 text-4xl text-black">
+        <button className="bg-white border-solid border-2 border-black">btn 1</button>
+        <button className="bg-white border-solid border-2 border-black">btn 2</button>
+        <button className="bg-white border-solid border-2 border-black">btn 3</button>
       </div>
     </div>
   );
