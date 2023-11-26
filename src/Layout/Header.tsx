@@ -24,10 +24,11 @@ export default function Header() {
 
       {/* bottom header */}
       <div className="flex flex-row justify-start pl-64 text-4xl text-black w-full h-14">
-        <button className="bg-white border-solid border-2 border-black w-1/12">
+        
+        <button className="bg-neutral-400 text-white w-1/12">
           1
         </button>
-        <button className="bg-white border-solid border-2 border-black w-1/3">
+        <button className="bg-white w-1/3">
           <select className="w-full h-full text-xl p-2">
             <option>슈크림 붕어빵</option>
             <option>팥 붕어빵</option>
@@ -35,8 +36,8 @@ export default function Header() {
             <option>고구마 붕어빵</option>
           </select>
         </button>
-        <button className="bg-white border-solid border-2 border-black w-1/3">
-          <select className="w-full h-full text-xl p-2">
+        <button className="bg-black  w-1/3">
+          <select className="bg-neutral-800 text-white w-full h-full text-xl p-2">
             <option>서현점</option>
             <option>수원점</option>
             <option>남부터미널점</option>
