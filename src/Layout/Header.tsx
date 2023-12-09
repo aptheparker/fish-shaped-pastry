@@ -1,4 +1,6 @@
 import { invoke } from "@tauri-apps/api";
+import Hamburger from "hamburger-react";
+import { useState } from "react";
 
 export default function Header() {
   const NavButtonHandler = async () => {
@@ -7,14 +9,50 @@ export default function Header() {
     );
   };
 
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div className="bg-mainImg bg-cover bg-center w-full h-[55%] flex flex-col justify-between">
+      {isOpen && (
+        <div className="fixed inset-0 z-1 bg-black opacity-80">
+          <div className="flex flex-row justify-center items-center h-full">
+            <div className="flex flex-col items-center p-4 text-white text-xl">
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <hr className="w-56 border-yellow-100 mb-6" />
+              <p className="mb-2">붕어빵 이야기</p>
+              <p className="mb-2">메뉴 이야기</p>
+            </div>
+            <div className="flex flex-col items-center p-4 text-white text-xl">
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <hr className="w-56 border-yellow-100 mb-6" />
+              <p className="mb-2">붕어빵 이야기</p>
+              <p className="mb-2">메뉴 이야기</p>
+            </div>
+            <div className="flex flex-col items-center p-4 text-white text-xl">
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <hr className="w-56 border-yellow-100 mb-6" />
+              <p className="mb-2">붕어빵 이야기</p>
+              <p className="mb-2">메뉴 이야기</p>
+            </div>
+            <div className="flex flex-col items-center p-4 text-white text-xl">
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <hr className="w-56 border-yellow-100 mb-6" />
+              <p className="mb-2">붕어빵 이야기</p>
+              <p className="mb-2">메뉴 이야기</p>
+            </div>
+            <div className="flex flex-col items-center p-4 text-white text-xl">
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <hr className="w-56 border-yellow-100 mb-6" />
+              <p className="mb-2">붕어빵 이야기</p>
+              <p className="mb-2">메뉴 이야기</p>
+            </div>
+          </div>
+        </div>
+      )}
       {/* top header */}
       <div className="flex flex-row justify-between text-white pt-4 px-14 text-4xl">
         <h1 className="text-center">붕어빵</h1>
-        <button className="text-center" onClick={NavButtonHandler}>
-          X
-        </button>
+        <Hamburger toggled={isOpen} toggle={setOpen} />
       </div>
 
       {/* middle header */}
@@ -24,10 +62,7 @@ export default function Header() {
 
       {/* bottom header */}
       <div className="flex flex-row justify-start pl-64 text-4xl text-black w-full h-14">
-        
-        <button className="bg-neutral-400 text-white w-1/12">
-          1
-        </button>
+        <button className="bg-neutral-400 text-white w-1/12">1</button>
         <button className="bg-white w-1/3">
           <select className="w-full h-full text-xl p-2">
             <option>슈크림 붕어빵</option>
