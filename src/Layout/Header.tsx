@@ -12,15 +12,15 @@ export default function Header() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="bg-mainImg bg-cover bg-center w-full h-[55%] flex flex-col justify-between">
+    <div className="bg-headerImg bg-cover bg-center w-full h-[55%] flex flex-col justify-between">
       {isOpen && (
         <div className="fixed inset-0 z-1 bg-black opacity-80">
           <div className="flex flex-row justify-center items-center h-full">
             <div className="flex flex-col items-center p-4 text-white text-xl">
-              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
+              <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 플레이리스트</h2>
               <hr className="w-56 border-yellow-100 mb-6" />
-              <p className="mb-2">붕어빵 이야기</p>
-              <p className="mb-2">메뉴 이야기</p>
+              <p className="mb-2">붕어빵 플레이리스트</p>
+              <p className="mb-2">플레이리스트 추천</p>
             </div>
             <div className="flex flex-col items-center p-4 text-white text-xl">
               <h2 className="text-yellow-100 text-3xl mb-4">붕어빵 이야기</h2>
